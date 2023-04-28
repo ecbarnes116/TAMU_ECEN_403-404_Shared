@@ -1,0 +1,77 @@
+
+# Define the main layout of the app with a custom name 'MainLayout'
+<MainLayout>:
+    orientation: "vertical"# Set the orientation of the main layout to vertical.
+    spacing: 10 # Set the spacing between the widgets to 10 pixels.
+    padding: 10 # Set the padding around the layout to 10 pixels.
+    
+
+    FileChooserIconView: # Add a FileChooserIconView widget to browse and select files.
+        id: file_chooser
+        filters: ["*.csv"] # Set the file filters to display only CSV files.
+        path: "/sdcard" # Set the initial directory path for the file chooser.
+        size_hint: 1, 0.5 # Set the size hint for the file chooser.
+        on_selection: app.open_csv_files(self.selection) # Bind the 'on_selection' event to call the 'open_csv_files' method when a file is selected.
+
+    BoxLayout: # Add a horizontal BoxLayout to place buttons side by side.
+        orientation: "horizontal"
+        size_hint: 1, 0.1
+
+        Button: # Add a Button to open the selected CSV files.
+            text: "Open CSV"
+            on_release: app.open_csv_files(file_chooser.selection) # Bind the 'on_release' event to call the 'open_csv_files' method with the selected files when the button is pressed.
+
+        Button: # Add a Button to save the graph as an image.
+            text: "Save File"
+            on_release: app.save_graph() # Bind the 'on_release' event to call the 'save_graph' method when the button is pressed.
+
+    BoxLayout: # Add a BoxLayout to display the graph
+        id: graph_container
+        size_hint: 1, 1
+    BoxLayout: # Add a BoxLayout to display the statistics labels.
+        id: calculate_satatistic
+        size_hint: 1, 0.2
+        # Add Labels for max, min, avg, max FFT amplitude, result, and explosion time.
+        Label:
+            id: max_value_label
+            text: "Max: "
+            size_hint_x: 0.2
+        Label:
+            id: min_value_label
+            text: "Min: "
+            size_hint_x: 0.2
+        Label:
+            id: avg_value_label
+            text: "Avg: "
+            size_hint_x: 0.2
+        Label:
+            id: max_fft_amplitude
+            text: "Max FFT Amp: "
+            size_hint_x: 0.2
+        Label:
+            id: result_label
+            text: "Result: "
+            size_hint_x: 0.2
+        Label:
+            id: timestamp_label
+            text: "Explosion Time: "
+            size_hint_x: 0.2
+
+    BoxLayout: # Add a horizontal BoxLayout for the time range filter.
+        orientation: "horizontal"
+        size_hint: 1, 0.2
+        
+        TextInput: # Add TextInput widgets for start time and end time.
+            id: start_time_input
+            hint_text: "Start Time"
+            size_hint_x: 0.1
+            input_filter: 'float'
+        TextInput:
+            id: end_time_input
+            hint_text: "End Time"
+            size_hint_x: 0.1
+            input_filter: 'float'
+        Button:
+            text: "Apply Time Range"
+            size_hint_x: 0.1
+            on_release: app.apply_time_range_filter(file_chooser.selection, start_time_input.text, end_time_input.text)
