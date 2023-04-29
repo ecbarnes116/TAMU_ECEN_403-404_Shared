@@ -43,6 +43,8 @@
 // Currently (4*100 = buffer size of 400)
 #define ADC_BUFFER_SIZE 400
 
+// FIXME: Currently not being used
+// printf buffer size
 #define BUFFER_SIZE 128
 //#define PATH_SIZE 32
 
@@ -50,15 +52,24 @@
 // Every sample is appended to this buffer
 #define SD_BUFFER_SIZE 2500
 
-#define THRESHOLD_AUDIO 	   40
-#define THRESHOLD_PRESSURE 	   40
-#define THRESHOLD_ACCELERATION 40
+// Threshold values to detect explosion
+// Real threshold around 150 kPa
+#define THRESHOLD_AUDIO 	   0.1
+// Real threshold around 140 dB
+#define THRESHOLD_PRESSURE 	   0.1
+// Real threshold of 50 g
+#define THRESHOLD_ACCELERATION 0.1
 
+// Multiple of number of samples read from ADC
+// Num of samples written to file before saving = CLUSTER_SIZE * ADC_BUFFER_SIZE/(num_sensors*2)
+// 10,000 = 200 * (400/8)
 #define CLUSTER_SIZE 200
 
 // Internal reference voltage for STM32F446RE (mV)
+// Multiply by this value to convert raw voltage input to voltage in mV
 #define REFERENCE_VOLTAGE_CONVERSION 1000.0/1200.0
 // Reference sensitivity for microphone (mV)
+// TODO: Need to check with Sandia to make sure this is correct
 #define AUDIO_REFERENCE 1.00
 // Reference sensitivity for pressure sensor (mV)
 #define PRESSURE_REFERENCE 14.62
@@ -89,27 +100,34 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 
 // 16 bit (Half Word) ADC DMA data width
-// ADC array for data (size of 5, width of 16 bits)
+// ADC array for data (size of 400, width of 16 bits)
+// I am only getting 12 bits from the ADC, so 4 bits of memory are wasted per ADC reading)
 uint16_t adc_data[ADC_BUFFER_SIZE];
 
+// FIXME: Currently not being used
 uint16_t audio_arr[ADC_BUFFER_SIZE/8];
 uint16_t pressure_arr[ADC_BUFFER_SIZE/8];
 uint16_t acc_arr[ADC_BUFFER_SIZE/8];
-//float acc_arr[ADC_BUFFER_SIZE];
 
+// TODO: Create array to hold date/time info when implemented
 // data_type??? time_arr[ADC_BUFFER_SIZE/8];
 
+// Pointer to index of adc_data array
+// Used for ping pong buffer to set the start index at the halfway point of the adc_data array
 static volatile uint16_t *fromADC_Ptr;
 //static volatile uint16_t *toSD_Ptr = &adc_data[0];
 
-char buffer[BUFFER_SIZE];	// Store strings for f_write
+char buffer[BUFFER_SIZE];
 //char path[PATH_SIZE];		// buffer to store path
 
 // Buffer that is written to SD card
 char SD_buffer[SD_BUFFER_SIZE];
 
+// Flag set when ADC buffer is either half-full or completely full
 volatile uint8_t dataReady;
+// Flag set when ADC buffer is half-full
 volatile uint8_t dmaHalf;
+// Flag set when ADC buffer is completely full
 volatile uint8_t dmaFull;
 
 /* USER CODE END PV */
@@ -130,16 +148,25 @@ static void MX_RTC_Init(void);
 /* USER CODE BEGIN 0 */
 
 // These are already defined in file_handling.c
-FATFS fs; // file system
-FIL fil; // file
-FILINFO fno;		// ???
+// file system object
+FATFS fs;
+// file object
+FIL fil;
+// Pointer to the blank FILINFO structure to store the information of the object
+// Set null pointer if this information is not needed
+FILINFO fno;
+// Returns codes for FR_OK or errors
 FRESULT fresult;
+// Pointer to the UINT variable that receives the number of bytes written
 UINT br, bw;
+// FIXME: Currently not being used
 FATFS *pfs;
+// FIXME: Currently not being used
 DWORD fre_clust;
+// FIXME: Currently not being used
 uint32_t total, free_space;
 
-// Controls amount of data written to buffer fileeee
+// Controls amount of data written to buffer file
 uint8_t cluster = 0;
 // Keeps track of number of files saved out with useful data
 uint16_t batch = 0;
@@ -149,9 +176,11 @@ uint8_t explosionDetected = 0;
 // 1 if there was an explosion detected for an entire batch
 uint8_t SAVE_BUFFER_FILE = 0;
 
+// Start and stop times to determine time it takes to save a buffer file
 int saveBufferStart;
 int saveBufferStop;
 
+// Current readings from each sensor
 float current_audio;
 float current_pressure;
 float current_acc;
@@ -159,6 +188,7 @@ float current_acc;
 float current_acc_x;
 float current_acc_y;
 
+// Previous readings from each sensor
 float previous_audio;
 float previous_pressure;
 float previous_acc;
@@ -166,10 +196,12 @@ float previous_acc;
 float previous_acc_x;
 float previous_acc_y;
 
+// Change in readings from each sensor (current - previous)
 float delta_audio;
 float delta_pressure;
 float delta_acc;
 
+// FIXME: Currently not being used
 int _write(int file, char *ptr, int length) {
 	int i = 0;
 
@@ -180,13 +212,14 @@ int _write(int file, char *ptr, int length) {
 	return length;
 }
 
+// FIXME: Currently not being used
 int bufsize (char *buf) {
 	int i=0;
 	while (*buf++ != '\0') i++;
 	return i;
 }
 
-
+// FIXME: Currently not being used
 // Clear UART buffer for debugging
 void bufclear(void) {
 	for(int i = 0; i < BUFFER_SIZE; i++){
@@ -208,6 +241,7 @@ void SDbufclear(void) {
 void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc) {
 	dmaFull = 0;
 
+	// Set pointer to beginning of buffer to starting reading first half
 	fromADC_Ptr = &adc_data[0];
 	dataReady = 1;
 }
@@ -215,6 +249,7 @@ void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc) {
 // Called when ADC buffer is completely filled
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 
+	// Set pointer to halfway point of buffer to starting reading second half
 	fromADC_Ptr = &adc_data[ADC_BUFFER_SIZE/2];
 
 	dmaFull = 1;
@@ -225,11 +260,12 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 
 
 
+// Write full SD buffer to adc_data.csv buffer file
 void writeSD(const void* buffer, uint16_t len) {
 	// Moves the file read/write pointer to the end of the file
 	fresult = f_lseek(&fil, f_size(&fil));
 
-	// Write the buffer (data worth half of DMA buffer) to the file
+	// Write the buffer (data worth half of ADC buffer) to the file
 	fresult = f_write(&fil, buffer, len, &bw);
 
 	// f_sync flushes the cached information of a writing file
@@ -244,13 +280,16 @@ void writeSD(const void* buffer, uint16_t len) {
 
 
 
+// Main function to receive data, split it up by sensor, get real values, find deltas, and build SD buffer
 void processData() {
+	// Keeps track of which channel is being read from (which sensor)
 	uint8_t channel = 0;
 	uint16_t write_len = 0;
 
 	// Keeps track of the "global sample" (i.e, every 4 ADC readings)
 	uint8_t sample_index = 0;
 
+	// Create empty buffer to add sample readings to
 	snprintf(SD_buffer, SD_BUFFER_SIZE, "%s", "\0"); // Empty char (null char)
 
 	for(uint8_t i = 0; i < (ADC_BUFFER_SIZE)/2; i++) {
@@ -412,7 +451,7 @@ void processData() {
 	// Finally, write huge buffer to SD card
 	writeSD(SD_buffer, write_len);
 
-	// Clear SD_buffer so new data can be written (next half of DMA buffer)
+	// Clear SD_buffer so new data can be written (next half of ADC buffer)
 	SDbufclear();
 
 	dataReady = 0;
@@ -422,13 +461,14 @@ void processData() {
 
 
 
+// Renames buffer file to save out the data from the most recent buffer file
 void saveBufferFile() {
 	char file_name[20];
 
 	// Do something here
 	fresult = f_close(&fil);
 
-	// FIXME: This is
+	// FIXME: This is not the proper way to get the strlen of the file name, actually fix this
 	// need to have variable length string for file name (depends on batch #)
 	snprintf(file_name, BUFFER_SIZE, "BATCH_%d.csv", batch);
 	snprintf(file_name, strlen(file_name)+1, "BATCH_%d.csv", batch);
@@ -441,6 +481,7 @@ void saveBufferFile() {
 
 
 // TODO: Write function to overwrite existing buffer file
+// This function will be called if the most recent buffer file does not need to be saved out (no explosion detected)
 // Doing this avoids wasting time by:
 //	1. Creating and opening a new file
 //	2. Writing the column names to that file
@@ -460,11 +501,14 @@ void overwriteBufferFile() {
 
 
 
+// Create new buffer file when most recent buffer file is renamed to be saved out
+// Same used in main to first create adc_data.csv buffer file
 void setupBufferFile() {
 	char *name = "adc_data.csv";
 
 	fresult = f_stat(name, &fno);
 
+	// Do not create (or overwrite) if file already exists
 	if (fresult == FR_OK) {
 		printf("*%s* already exists!!!\n",name);
 		bufclear();
@@ -484,7 +528,10 @@ void setupBufferFile() {
 		bufclear();
 	}
 
-	fresult = f_printf(&fil, "time,explosion,audio,pressure,acceleration,delta_audio\r\n");
+	// FIXME: This can be added to the SD buffer before the first sample is appended
+	// This will mean that each buffer file is only written to once every time it is opened instead of twice
+	// Write first line to file - column names
+	fresult = f_printf(&fil, "batch,cluster,explosion,audio,pressure,acceleration,delta_audio\r\n");
 }
 
 
@@ -532,12 +579,13 @@ int main(void)
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
 
-  // Start DMA buffer
+  // Start DMA; Begin filling ADC buffer
   HAL_ADC_Start_DMA(&hadc1, (uint16_t*)adc_data, ADC_BUFFER_SIZE);
 
   // Mount SD card
   fresult = f_mount(&fs, "", 0);
 
+  // Check if SD card was mounted successfully
   if(fresult != FR_OK){
 	  printf("ERROR in mounting SD card...\n");
   }
@@ -556,9 +604,8 @@ int main(void)
 //  bufclear();
 
   // Turn this setup process into a function
-
   char *name = "adc_data.csv";
-  char *column_names = "batch,time,explosion,audio,pressure,acceleration,delta_audio\r\n";
+  char *column_names = "batch,cluster,explosion,audio,pressure,acceleration,delta_audio\r\n";
 
   fresult = f_stat(name, &fno);
 
@@ -578,7 +625,7 @@ int main(void)
 		  bufclear();
 	  }
 
-  fresult = f_printf(&fil, "batch,time,explosion,audio,pressure,acceleration,delta_audio\r\n");
+  fresult = f_printf(&fil, "batch,cluster,explosion,audio,pressure,acceleration,delta_audio\r\n");
 
   // Get starting tick value (start timer)
   int start = HAL_GetTick();
@@ -597,7 +644,7 @@ int main(void)
 
 	  if(dataReady) {
 
-		  // Read BUFFER_SIZE/2 data points from ADC and add to buffer
+		  // Read ADC_BUFFER_SIZE/2 data points from ADC and add to buffer
 		  processData();
 		  // Increment cluster count
 		  cluster++;
@@ -605,13 +652,14 @@ int main(void)
 	  	  }
 
 	  // Stop when cluster is a certain value (leads to unmount SD card)
-//	  if((cluster >= CLUSTER_SIZE) && SAVE_BUFFER_FILE) {
-	  if(cluster >= CLUSTER_SIZE) {
+	  // FIXME: UNDO THIS TO SHOW THRESHOLD ACTIVATION WORKS
+	  if((cluster >= CLUSTER_SIZE) && SAVE_BUFFER_FILE) {
 		  saveBufferStart = HAL_GetTick();
 		  saveBufferFile();
 		  setupBufferFile();
 		  saveBufferStop = HAL_GetTick();
 
+		  // Shows total time wasted by saving a file
 		  printf("Time wasted making saving buffer data and creating new buffer file: %d\r\n", saveBufferStop-saveBufferStart);
 
 		  cluster = 0;
@@ -627,6 +675,7 @@ int main(void)
 
 	  // This will eventually turn into an external interrupt from the user
 	  // pressing a button
+	  // Number of files saved to SD card
 	  if(batch >= 10) {
 		  break;
 	  }
