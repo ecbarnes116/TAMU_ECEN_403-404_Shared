@@ -96,7 +96,7 @@ class myShow(myShow_, QMainWindow):
                 df_ones = filtered_data[filtered_data["explosion"] == 1]
                 result = df_ones.reset_index().groupby('group').agg(start=('index', 'first'), end=('index', 'last'),
                                                                     count=('index', 'count'))
-                # 找到最大长度的分组
+               # Find the maximum length group
                 max_length = result['count'].max()
                 max_length_groups = result[result['count'] == max_length]
                 maxtime = -1
@@ -125,11 +125,11 @@ class myShow(myShow_, QMainWindow):
         if csv_filename == "":
             QtWidgets.QMessageBox.warning(self, "Warning", "Please load data first", QtWidgets.QMessageBox.Cancel)
             return
-        # 检查扩展名是否是.csv
+       # Check if the extension is .csv
         if not os.path.splitext(csv_filename.lower())[1].lower() == ".csv":
             QtWidgets.QMessageBox.warning(self, "Warning", "Please load CSV format file", QtWidgets.QMessageBox.Cancel)
             return
-        # 尝试读取CSV文件
+        # Try to read the CSV file
         try:
             df = pd.read_csv(csv_filename)
             df = df.dropna()
@@ -140,7 +140,7 @@ class myShow(myShow_, QMainWindow):
             QtWidgets.QMessageBox.warning(self, "Warning", f"document {csv_filename} does not exist", QtWidgets.QMessageBox.Cancel)
             return False
 
-        # 检查是否包含所需列
+        # Check if required columns are included
         requireds = ["batch","delta_pressure"]
         if [col for col in requireds if col not in df.columns]:
             QtWidgets.QMessageBox.warning(self, "Warning", f"The CSV file is not appropriate",
@@ -162,13 +162,13 @@ class myShow(myShow_, QMainWindow):
             df_ones = df[df["explosion"] == 1]
             result = df_ones.reset_index().groupby('group').agg(start=('index', 'first'), end=('index', 'last'),
                                                                 count=('index', 'count'))
-            # 找到最大长度的分组
+            # Find the maximum length group
             max_length = result['count'].max()
             max_length_groups = result[result['count'] == max_length]
 
             maxtime = -1
             for _, max_length_info in max_length_groups.iterrows():
-                # print(f"起始行: {max_length_info['start']}, 结束行: {max_length_info['end']}")
+                # print(f"start line: {max_length_info['start']}, end line: {max_length_info['end']}")
                 maxtime = max(maxtime,df['cluster'].iloc[max_length_info['end']] - df['cluster'].iloc[max_length_info['start']])
             maxtime = round(maxtime,3)
 
