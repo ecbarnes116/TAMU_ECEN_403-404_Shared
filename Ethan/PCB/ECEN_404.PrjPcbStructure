@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=MCU.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=MCU.SchDoc|FileName=microSD_reader.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=MCU.SchDoc|FileName=power.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=MCU.SchDoc|FileName=sensors.SchDoc|SheetNumber=4
