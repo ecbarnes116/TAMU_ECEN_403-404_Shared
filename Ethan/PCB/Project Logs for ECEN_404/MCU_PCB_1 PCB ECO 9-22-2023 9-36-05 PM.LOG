@@ -1,0 +1,45 @@
+Removed Pin From Net: NetName=VBUS Pin=C?-1
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found SAMTEC-FTSH-107-01-X-DV
+Add Component: Footprint Not Found 1660
+Added Pin To Net: NetName=+3.3V Pin=C?-1
+Added Pin To Net: NetName=+5V Pin=C?-1
+Added Pin To Net: NetName=VBUS Pin=C?-1
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin H1-11
+Add Pin To Net: Unknown Pin: Pin H1-12
+Add Pin To Net: Unknown Pin: Pin H1-13
+Add Pin To Net: Unknown Pin: Pin H1-14
+Add Pin To Net: Unknown Pin: Pin J1-1
+Add Pin To Net: Unknown Pin: Pin J1-2
+Add Pin To Net: Unknown Pin: Pin J1-3
+Add Pin To Net: Unknown Pin: Pin J1-4
+Add Pin To Net: Unknown Pin: Pin J1-5
+Add Pin To Net: Unknown Pin: Pin J1-6
+Add Pin To Net: Unknown Pin: Pin J1-7
+Add Pin To Net: Unknown Pin: Pin J1-8
+Add Pin To Net: Unknown Pin: Pin J1-9
+Add Pin To Net: Unknown Pin: Pin J1-10
+Add Pin To Net: Unknown Pin: Pin J1-11
+Add Pin To Net: Unknown Pin: Pin J1-12
+Change Net Name : Old Net Name=NetR11_2 New Net Name=VBAT
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C476M9PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Add Class Member: Failed to add class member : Component H1 SAMTEC-FTSH-107-01-X-DVJ
+Add Class Member: Failed to add class member : Component J1 1660

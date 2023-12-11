@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=+3.3V Pin=C6-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Change Component Footprint: Designator=D1 Old Footprint=WL-SMCW_0603_150060xx75003 New Footprint=WL-SMCW_0603_150060xx75003
+Change Component Footprint: Designator=D2 Old Footprint=WL-SMCW_0603_150060xx75003 New Footprint=WL-SMCW_0603_150060xx75003
+Add Component: Footprint Not Found SAMTEC-FTSH-107-01-X-DV
+Add Component: Footprint Not Found 1660
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found SOT95P280X145-5N
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin H1-11
+Add Pin To Net: Unknown Pin: Pin H1-12
+Add Pin To Net: Unknown Pin: Pin H1-13
+Add Pin To Net: Unknown Pin: Pin H1-14
+Add Pin To Net: Unknown Pin: Pin J1-1
+Add Pin To Net: Unknown Pin: Pin J1-2
+Add Pin To Net: Unknown Pin: Pin J1-3
+Add Pin To Net: Unknown Pin: Pin J1-4
+Add Pin To Net: Unknown Pin: Pin J1-5
+Add Pin To Net: Unknown Pin: Pin J1-6
+Add Pin To Net: Unknown Pin: Pin J1-7
+Add Pin To Net: Unknown Pin: Pin J1-8
+Add Pin To Net: Unknown Pin: Pin J1-9
+Add Pin To Net: Unknown Pin: Pin J1-10
+Add Pin To Net: Unknown Pin: Pin J1-11
+Add Pin To Net: Unknown Pin: Pin J1-12
+Add Pin To Net: Unknown Pin: Pin J3-1
+Add Pin To Net: Unknown Pin: Pin J3-2
+Add Pin To Net: Unknown Pin: Pin J4-1
+Add Pin To Net: Unknown Pin: Pin J4-2
+Add Pin To Net: Unknown Pin: Pin J5-1
+Add Pin To Net: Unknown Pin: Pin J5-2
+Add Pin To Net: Unknown Pin: Pin J6-1
+Add Pin To Net: Unknown Pin: Pin J6-2
+Add Pin To Net: Unknown Pin: Pin X2-1
+Add Pin To Net: Unknown Pin: Pin X2-3
+Add Pin To Net: Unknown Pin: Pin X2-4
+Add Pin To Net: Unknown Pin: Pin X2-5
+Add Class Member: Failed to add class member : Component H1 SAMTEC-FTSH-107-01-X-DVJ
+Add Class Member: Failed to add class member : Component J1 1660
+Add Class Member: Failed to add class member : Component J3 031-5431-10RFX
+Add Class Member: Failed to add class member : Component J4 031-5431-10RFX
+Add Class Member: Failed to add class member : Component J5 031-5431-10RFX
+Add Class Member: Failed to add class member : Component J6 031-5431-10RFX
+Add Class Member: Failed to add class member : Component X2 SiT2024BA-S2-33E-8.000000G

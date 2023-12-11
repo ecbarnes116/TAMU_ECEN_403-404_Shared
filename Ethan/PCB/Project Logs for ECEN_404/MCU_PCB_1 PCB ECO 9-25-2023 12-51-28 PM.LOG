@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=MCU_LED_A Pin=D1-1
+Removed Pin From Net: NetName=MCU_LED_C Pin=D1-2
+Change Component Footprint: Designator=D1 Old Footprint=WL-SMCW_0603_150060xx75003 New Footprint=LEDC2012X50N
+Change Component Comment : Designator=D1 Old Comment=150060VS75003 New Comment=APT2012CGCK
+Change Managed Component Library Link : Designator=D1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=BD63722C-19DE-4CE8-A2F1-D3427C6F5833 New ItemGUID= Old RevisionGUID=BE6879B7-B335-4840-96DE-0503EF47A173 New RevisionGUID=
+Change component parameters: Designator = "D1" ("D1"); Footprint = "WL-SMCW_0603_150060xx75003"; UniqueID = "\HYMGBVMF" ("\HYMGBVMF")
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/APT2012CGCK.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = "0.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Kingbright"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "APT2012CGCK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "604-APT2012CGCK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Kingbright/APT2012CGCK?qs=VdjlWU%2FzoOEv1TxC2gMNzg%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=MCU_LED_C Pin=D1-1
+Added Pin To Net: NetName=MCU_LED_A Pin=D1-2
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin U1-60
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU

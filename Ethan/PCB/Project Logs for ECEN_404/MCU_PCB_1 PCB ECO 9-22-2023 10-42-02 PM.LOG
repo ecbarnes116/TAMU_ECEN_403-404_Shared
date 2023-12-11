@@ -1,0 +1,44 @@
+Removed Pin From Net: NetName=VBUS Pin=C?-1
+Removed Pin From Net: NetName=+3.3V Pin=H1-03
+Removed Pin From Net: NetName=MCU_SWDIO Pin=H1-04
+Removed Pin From Net: NetName=GND Pin=H1-05
+Removed Pin From Net: NetName=MCU_SWCLK Pin=H1-06
+Removed Pin From Net: NetName=GND Pin=H1-07
+Removed Pin From Net: NetName=MCU_SWO Pin=H1-08
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found 1660
+Added Pin To Net: NetName=+3.3V Pin=C?-1
+Added Pin To Net: NetName=+5V Pin=C?-1
+Added Pin To Net: NetName=VBUS Pin=C?-1
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin J1-1
+Add Pin To Net: Unknown Pin: Pin J1-2
+Add Pin To Net: Unknown Pin: Pin J1-3
+Add Pin To Net: Unknown Pin: Pin J1-4
+Add Pin To Net: Unknown Pin: Pin J1-5
+Add Pin To Net: Unknown Pin: Pin J1-6
+Add Pin To Net: Unknown Pin: Pin J1-7
+Add Pin To Net: Unknown Pin: Pin J1-8
+Add Pin To Net: Unknown Pin: Pin J1-9
+Add Pin To Net: Unknown Pin: Pin J1-10
+Add Pin To Net: Unknown Pin: Pin J1-11
+Add Pin To Net: Unknown Pin: Pin J1-12
+Added Member To Class: ClassName=power Member=Component C? C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C? C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Add Class Member: Failed to add class member : Component J1 1660

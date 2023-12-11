@@ -1,0 +1,44 @@
+Removed Pin From Net: NetName=VBUS Pin=C?-1
+Removed Member From Class: ClassName=MCU Member=C?
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Added Component: Designator=J1(1660)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn-shop.adafruit.com/datasheets/15882.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Adafruit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1660"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "485-1660"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Adafruit/1660?qs=GURawfaeGuCXDyGMVdt6Kw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3.3V Pin=C?-1
+Added Pin To Net: NetName=+5V Pin=C?-1
+Added Pin To Net: NetName=VBUS Pin=C?-1
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Added Pin To Net: NetName=SDIO_DAT2 Pin=J1-1
+Added Pin To Net: NetName=SDIO_DAT3 Pin=J1-2
+Added Pin To Net: NetName=SDIO_CMD Pin=J1-3
+Added Pin To Net: NetName=+3.3V Pin=J1-4
+Added Pin To Net: NetName=SDIO_CLK Pin=J1-5
+Added Pin To Net: NetName=GND Pin=J1-6
+Added Pin To Net: NetName=SDIO_DAT0 Pin=J1-7
+Added Pin To Net: NetName=SDIO_DAT1 Pin=J1-8
+Added Pin To Net: NetName=SDIO_CD Pin=J1-9
+Added Pin To Net: NetName=NetJ1_10 Pin=J1-10
+Added Pin To Net: NetName=GND Pin=J1-11
+Added Pin To Net: NetName=GND Pin=J1-12
+Added Member To Class: ClassName=power Member=Component C? C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C? C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C? C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C? C1210C107M9PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=microSD_reader Member=Component J1 1660

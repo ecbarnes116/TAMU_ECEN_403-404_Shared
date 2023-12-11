@@ -1,0 +1,43 @@
+Removed Member From Class: ClassName=sensors Member=C22
+Removed Member From Class: ClassName=power Member=C27
+Removed Member From Class: ClassName=power Member=C28
+Removed Member From Class: ClassName=power Member=C30
+Added Component: Designator=C21(CAPC3225X280)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "C1210C476M9PACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C24(CAPC3225X280)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "C1210C476M9PACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5V Pin=C21-1
+Added Pin To Net: NetName=GND Pin=C21-2
+Added Pin To Net: NetName=+3.3V Pin=C24-1
+Added Pin To Net: NetName=GND Pin=C24-2
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Added Pin To Net: NetName=MCU_PUSH_BUTTON Pin=U1-2
+Added Pin To Net: NetName=MCU_PUSH_BUTTON Pin=U1-2
+Add Pin To Net: Unknown Pin: Pin U1-60
+Added Member To Class: ClassName=power Member=Component C16 C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C17 C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C18 C0603C225M8PACTU
+Added Member To Class: ClassName=power Member=Component C19 C1210C226K4PACTU
+Added Member To Class: ClassName=power Member=Component C20 C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C21 C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C22 C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C24 C1210C476M9PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU

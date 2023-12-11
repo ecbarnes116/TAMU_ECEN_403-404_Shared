@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=+3.3V Pin=H1-03
+Removed Pin From Net: NetName=MCU_SWDIO Pin=H1-04
+Removed Pin From Net: NetName=GND Pin=H1-05
+Removed Pin From Net: NetName=MCU_SWCLK Pin=H1-06
+Removed Pin From Net: NetName=GND Pin=H1-07
+Removed Pin From Net: NetName=MCU_SWO Pin=H1-08
+Remove Pin from Net: Failed to remove Pin
+Removed Pin From Net: NetName=ADC1_IN0 Pin=U3-1
+Removed Pin From Net: NetName=NetC33_1 Pin=U3-3
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin U1-60
+Added Pin To Net: NetName=NetC33_1 Pin=U3-1
+Added Pin To Net: NetName=ADC1_IN0 Pin=U3-3

@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=VBUS Pin=C?-1
+Removed Pin From Net: NetName=MCU BOOT0 Pin=U1-2
+Removed Pin From Net: NetName=MCU_PUSH_BUTTON Pin=U1-2
+Removed Member From Class: ClassName=power Member=C?
+Change Component Designator: OldDesignator=C16 NewDesignator=C18
+Change Component Designator: OldDesignator=C17 NewDesignator=C19
+Change Component Designator: OldDesignator=C18 NewDesignator=C26
+Change Component Designator: OldDesignator=C19 NewDesignator=C27
+Change Component Designator: OldDesignator=C20 NewDesignator=C28
+Change Component Designator: OldDesignator=C21 NewDesignator=C29
+Change Component Designator: OldDesignator=C22 NewDesignator=C30
+Change Component Designator: OldDesignator=C? NewDesignator=C16
+Change Component Designator: OldDesignator=C? NewDesignator=C20
+Change Component Designator: OldDesignator=C? NewDesignator=C22
+Change Component Designator: OldDesignator=C? NewDesignator=C23
+Change Component Designator: OldDesignator=C? NewDesignator=C25
+Added Component: Designator=C17(CAPC3225X280)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "C1210C476M9PACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CAPC3225X280
+Add Component: Footprint Not Found CAPC3225X280
+Added Pin To Net: NetName=VBUS Pin=C17-1
+Added Pin To Net: NetName=GND Pin=C17-2
+Add Pin To Net: Unknown Pin: Pin C21-1
+Add Pin To Net: Unknown Pin: Pin C21-2
+Added Pin To Net: NetName=+3.3V Pin=C23-1
+Add Pin To Net: Unknown Pin: Pin C24-1
+Add Pin To Net: Unknown Pin: Pin C24-2
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin U1-60
+Change Net Name : Old Net Name=NetC19_1 New Net Name=NetC27_1
+Change Net Name : Old Net Name=NetC20_1 New Net Name=NetC28_1
+Change Net Name : Old Net Name=NetC21_1 New Net Name=NetC29_1
+Change Net Name : Old Net Name=NetC21_2 New Net Name=NetC29_2
+Added Member To Class: ClassName=power Member=Component C19 C1210C226K4PACTU
+Added Member To Class: ClassName=power Member=Component C20 C1210C107M9PACTU
+Add Class Member: Failed to add class member : Component C21 C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C22 C0603C104K5RAC7082
+Added Member To Class: ClassName=power Member=Component C23 C0603C104K5RAC7082
+Add Class Member: Failed to add class member : Component C24 C1210C476M9PACTU
+Added Member To Class: ClassName=power Member=Component C25 C1210C107M9PACTU
+Added Member To Class: ClassName=power Member=Component C26 C1210C226K4PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=sensors Member=Component C? C0603C105M8PACTU
+Added Member To Class: ClassName=power Member=Component R12 CRCW06030000Z0EAC

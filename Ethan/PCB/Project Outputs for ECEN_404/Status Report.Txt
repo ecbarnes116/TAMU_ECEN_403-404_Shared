@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ECEN_404.PrjPcb]
+   Generated File[MCU_PCB_1.TXT]
+   Generated File[MCU_PCB_1.LDP]
+   Generated File[MCU_PCB_1.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 1:57:41 PM On 9/29/2023

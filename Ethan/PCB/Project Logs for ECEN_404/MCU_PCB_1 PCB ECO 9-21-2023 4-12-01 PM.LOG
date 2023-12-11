@@ -1,0 +1,54 @@
+Add Component: Footprint Not Found SAMTEC-FTSH-107-01-X-DV
+Add Component: Footprint Not Found 1660
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found 031543110RFX
+Add Component: Footprint Not Found 031543110RFX
+Added Component: Designator=X2(SOT95P280X145-5N)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/SiT2024BA-S2-33E-8.000000G.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = "1.45mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "SiTime"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SiT2024BA-S2-33E-8.000000G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "788-2024BA-S2-33E-8G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=788-2024BA-S2-33E-8G"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin H1-3
+Add Pin To Net: Unknown Pin: Pin H1-4
+Add Pin To Net: Unknown Pin: Pin H1-5
+Add Pin To Net: Unknown Pin: Pin H1-6
+Add Pin To Net: Unknown Pin: Pin H1-7
+Add Pin To Net: Unknown Pin: Pin H1-8
+Add Pin To Net: Unknown Pin: Pin H1-11
+Add Pin To Net: Unknown Pin: Pin H1-12
+Add Pin To Net: Unknown Pin: Pin H1-13
+Add Pin To Net: Unknown Pin: Pin H1-14
+Add Pin To Net: Unknown Pin: Pin J1-1
+Add Pin To Net: Unknown Pin: Pin J1-2
+Add Pin To Net: Unknown Pin: Pin J1-3
+Add Pin To Net: Unknown Pin: Pin J1-4
+Add Pin To Net: Unknown Pin: Pin J1-5
+Add Pin To Net: Unknown Pin: Pin J1-6
+Add Pin To Net: Unknown Pin: Pin J1-7
+Add Pin To Net: Unknown Pin: Pin J1-8
+Add Pin To Net: Unknown Pin: Pin J1-9
+Add Pin To Net: Unknown Pin: Pin J1-10
+Add Pin To Net: Unknown Pin: Pin J1-11
+Add Pin To Net: Unknown Pin: Pin J1-12
+Add Pin To Net: Unknown Pin: Pin J3-1
+Add Pin To Net: Unknown Pin: Pin J3-2
+Add Pin To Net: Unknown Pin: Pin J4-1
+Add Pin To Net: Unknown Pin: Pin J4-2
+Add Pin To Net: Unknown Pin: Pin J5-1
+Add Pin To Net: Unknown Pin: Pin J5-2
+Add Pin To Net: Unknown Pin: Pin J6-1
+Add Pin To Net: Unknown Pin: Pin J6-2
+Added Pin To Net: NetName=GND Pin=X2-1
+Added Pin To Net: NetName=NetR31_1 Pin=X2-3
+Added Pin To Net: NetName=+3.3V Pin=X2-4
+Added Pin To Net: NetName=MCU_OSC_IN Pin=X2-5
+Add Class Member: Failed to add class member : Component H1 SAMTEC-FTSH-107-01-X-DVJ
+Add Class Member: Failed to add class member : Component J1 1660
+Add Class Member: Failed to add class member : Component J3 031-5431-10RFX
+Add Class Member: Failed to add class member : Component J4 031-5431-10RFX
+Add Class Member: Failed to add class member : Component J5 031-5431-10RFX
+Add Class Member: Failed to add class member : Component J6 031-5431-10RFX
+Added Member To Class: ClassName=MCU Member=Component X2 SiT2024BA-S2-33E-8.000000G
