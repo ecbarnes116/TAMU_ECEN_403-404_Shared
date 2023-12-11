@@ -1,0 +1,617 @@
+*************************************************************
+FileName = MCU_PCB_1.GBR
+AutoAperture = True
+*************************************************************
+Generating : Mechanical 29
+      File : MCU_PCB_1.GM29
+
+    Adding Layer      : Mechanical 29
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Board
+      File : MCU_PCB_1.GM7
+
+    Adding Layer      : Board
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Bottom Component Center
+      File : MCU_PCB_1.GM24
+
+    Adding Layer      : Bottom Component Center
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom 3D Body
+      File : MCU_PCB_1.GM23
+
+    Adding Layer      : Bottom 3D Body
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Bottom Courtyard
+      File : MCU_PCB_1.GM21
+
+    Adding Layer      : Bottom Courtyard
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Bottom Assembly
+      File : MCU_PCB_1.GM20
+
+    Adding Layer      : Bottom Assembly
+
+
+Used DCodes :
+    D10
+    D11
+    D117
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : MCU_PCB_1.GM16
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : MCU_PCB_1.GM15
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D10
+    D11
+    D117
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : MCU_PCB_1.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : MCU_PCB_1.GM5
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+    D10
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : MCU_PCB_1.GM3
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : MCU_PCB_1.GM2
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : MCU_PCB_1.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : MCU_PCB_1.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D36
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : MCU_PCB_1.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : MCU_PCB_1.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D36
+    D40
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D116
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : MCU_PCB_1.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D18
+    D19
+    D20
+    D21
+    D28
+    D30
+    D31
+    D32
+    D33
+    D34
+    D36
+    D38
+    D40
+    D42
+    D44
+    D45
+    D47
+    D49
+    D50
+    D54
+    D55
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : MCU_PCB_1.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D10
+    D14
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : MCU_PCB_1.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : MCU_PCB_1.GPT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D88
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : MCU_PCB_1.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D36
+    D40
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : MCU_PCB_1.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D36
+    D40
+    D87
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+*************************************************************
+
+*************************************************************
+Generating : Plane (GND)
+      File : MCU_PCB_1.GP2
+
+    Adding Layer      : Plane (GND)
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+*************************************************************
+
+*************************************************************
+Generating : Plane (+3.3V)
+      File : MCU_PCB_1.GP1
+
+    Adding Layer      : Plane (+3.3V)
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : MCU_PCB_1.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : MCU_PCB_1.GD1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D13
+    D118
+    D119
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : MCU_PCB_1.GG1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : MCU_PCB_1.GM
+
+
+Used DCodes :
+    D120
+*************************************************************
+

@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\johnn\Downloads\MCU_PCB_1.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=mcu_pcb_1-roundholes.txt|DrillLayers=gtl,gp1,gp2,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=mcu_pcb_1-slotholes.txt|DrillLayers=gtl,gp1,gp2,gbl
