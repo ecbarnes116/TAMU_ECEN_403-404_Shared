@@ -20,23 +20,23 @@ def analyze_signal(signal, time):
     dominant_freq = frequencies[np.argmax(np.abs(fft_vals[1:])) + 1]
 
     a = {
-        "max_val": round(max_val,3), #图片上显示的Max(显示)
-        "min_val": round(min_val,3), #图片上显示的Min(显示)
-        "avg_val": round(avg_val,3), #图片上显示的Avg(显示)
-        "max_time": max_time, #max_val对应的时间(不显示在图片上但是需要数值)
-        "min_time": min_time, #min_val对应的时间(不显示在图片上但是需要数值)
-        "dominant_freq": round(dominant_freq,3),#图片上显示的Frequency(显示)
-        "fft_vals": fft_vals, #不显示在图片上但是需要数值
-        "frequencies": frequencies, #不显示在图片上但是需要数值
-        "max_fft_magnitude": round(max_fft_magnitude,3), #图片上显示的Max FFT Amp(显示)
-        "freq_at_max_magnitude": freq_at_max_magnitude #不显示在图片上但是需要数值
+        "max_val": round(max_val,3), #Max displayed on the app (display)
+        "min_val": round(min_val,3), #Min displayed on the app (display)
+        "avg_val": round(avg_val,3), #Avg displayed on the app (display)
+        "max_time": max_time, #The time corresponding to max_val (not displayed on the app but requires a numerical value)
+        "min_time": min_time, T#he time corresponding to min_val (not displayed on the app but requires a numerical value)
+        "dominant_freq": round(dominant_freq,3),#Frequency displayed on the app (display)
+        "fft_vals": fft_vals, #Not displayed on the picture but requires numerical value
+        "frequencies": frequencies, #Not displayed on the picture but requires numerical value
+        "max_fft_magnitude": round(max_fft_magnitude,3), #Max FFT Amp shown on the app (display)
+        "freq_at_max_magnitude": freq_at_max_magnitude #Not displayed on the app but requires numerical value
     }
     for k,v in a.items():
         print(k,v)
     return a
 
 
-# shape的code，把这个结果显示到Shape那块就可以了
+# The code of the shape, just display the result in the Shape section.
 import numpy as np
 from scipy.signal import find_peaks
 
